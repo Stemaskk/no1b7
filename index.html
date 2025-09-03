@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Building 7 — Unified Checker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="container">
+  <h1>Building 7 Questionnaire</h1>
+  <p class="subtitle">Answer all questions and click “Check Answers”. Get them all right to reveal the code.</p>
+</header>
+
+<main class="container">
+  <!-- Unified form -->
+  <form id="quiz-form" class="qa-form" novalidate>
+    <section class="card" aria-labelledby="b7-title">
+      <h2 id="b7-title">Building 7</h2>
+
+      <!-- Q1 -->
+      <fieldset class="q">
+        <legend>1) What is on <strong>Floor 3</strong> of Building 7?</legend>
+        <div class="choices">
+          <label><input type="radio" name="b7-floor3" value="MESA"> MESA</label>
+          <label><input type="radio" name="b7-floor3" value="Finance Office"> Finance Office</label>
+          <label><input type="radio" name="b7-floor3" value="Counseling Center"> Counseling Center</label>
+          <label><input type="radio" name="b7-floor3" value="Tutoring Center"> Tutoring Center</label>
+        </div>
+      </fieldset>
+
+      <!-- Q2 -->
+      <fieldset class="q">
+        <legend>2) Where can you get help for <strong>EOPS</strong>?</legend>
+        <input id="b7-eops" name="b7-eops" type="text" placeholder="Type the location…" required />
+      </fieldset>
+
+      <!-- Q3 -->
+      <fieldset class="q">
+        <legend>3) Visit the Dan &amp; Marie Archer Art Gallery. What does the artwork in the center contain?</legend>
+        <div class="choices">
+          <label><input type="radio" name="b7-gallery" value="Skeleton"> Skeleton</label>
+          <label><input type="radio" name="b7-gallery" value="Buildings"> Buildings</label>
+          <label><input type="radio" name="b7-gallery" value="Ocean Waves"> Ocean Waves</label>
+          <label><input type="radio" name="b7-gallery" value="City Skyline"> City Skyline</label>
+        </div>
+      </fieldset>
+
+      <!-- Q4 -->
+      <fieldset class="q">
+        <legend>4) Where is the <strong>Finance Center</strong> located?</legend>
+        <div class="choices">
+          <label><input type="radio" name="b7-finance" value="Floor 1"> Floor 1</label>
+          <label><input type="radio" name="b7-finance" value="Floor 2"> Floor 2</label>
+          <label><input type="radio" name="b7-finance" value="Floor 3"> Floor 3</label>
+        </div>
+      </fieldset>
+
+      <!-- Q5 -->
+      <fieldset class="q">
+        <legend>5) Next to Student Accessibility Services there are pictures of Ohlone’s faculty. What is the name of <strong>one</strong> of the trustees?</legend>
+        <input id="b7-trustee" name="b7-trustee" type="text" placeholder="Type a trustee’s name…" required />
+      </fieldset>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id="checkAll" type="submit" class="btn">Check Answers</button>
+        <button type="button" class="btn ghost" id="resetAll">Reset</button>
+      </div>
+    </section>
+  </form>
+
+  <!-- Feedback -->
+  <section class="card" aria-labelledby="results-title">
+    <h2 id="results-title">Results</h2>
+    <output id="results" class="output" aria-live="polite"></output>
+  </section>
+</main>
+
+<!-- Modal for access code -->
+<div id="modal-overlay" class="overlay hidden" aria-hidden="true"></div>
+<div id="access-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <h3 id="modal-title">Access Granted</h3>
+  <p>Your code is:</p>
+  <pre class="access-code">FAF$A</pre>
+  <div class="modal-actions">
+    <button id="modal-ok" class="btn">OK</button>
+  </div>
+</div>
+
+<footer class="container footer">
+  <small>All checking is done locally in your browser.</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
