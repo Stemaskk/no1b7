@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Building 7 — Unified Checker</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
 <header class="container">
   <h1>Building 7 Questionnaire</h1>
-  <p class="subtitle">Answer all questions and click “Check Answers”. Get them all right to reveal the code.</p>
+  <p class="subtitle">Answer all questions and click “Check Answers”. Get them all right to be redirected.</p>
 </header>
 
 <main class="container">
   <!-- Unified form -->
-  <form id="quiz-form" class="qa-form" novalidate>
+  <form id="quiz-form" class="qa-form" novalidate action="javascript:void(0)">
     <section class="card" aria-labelledby="b7-title">
       <h2 id="b7-title">Building 7</h2>
 
@@ -77,21 +78,8 @@
   </section>
 </main>
 
-<!-- Modal for access code -->
-<div id="modal-overlay" class="overlay hidden" aria-hidden="true"></div>
-<div id="access-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <h3 id="modal-title">Access Granted</h3>
-  <p>Your code is:</p>
-  <pre class="access-code">FAF$A</pre>
-  <div class="modal-actions">
-    <button id="modal-ok" class="btn">OK</button>
-  </div>
-</div>
-
 <footer class="container footer">
   <small>All checking is done locally in your browser.</small>
 </footer>
-
-<script src="app.js"></script>
 </body>
 </html>
