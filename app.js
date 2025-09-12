@@ -45,9 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
             "suzanneleechan",
             "bettyho",
             "drrichardwatters",
+            "richardwatters",
+            "rakishsharma",
             "drrakishsharma",
             "elisamartinez",
-            "gregorybonaccorsi"
+            "gregorybonaccorsi",
+            "lancekwan"
         ]
     };
 
